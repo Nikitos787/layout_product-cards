@@ -1,0 +1,27 @@
+@use './utils/variables' as *;
+
+.stars {
+  display: flex;
+  gap: 4px;
+  padding: 16px 0 24px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-size: cover;
+  }
+
+  &__reviews {
+    font-size: 11px;
+    color: $color-code;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+}

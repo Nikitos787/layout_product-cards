@@ -1,3 +1,9 @@
+@use 'font';
+@use 'card';
+@use './utils/variables' as *;
+@use 'stars';
+
 body {
   margin: 0;
+  font-family: $font-main;
 }
